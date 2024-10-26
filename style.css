@@ -3,35 +3,29 @@ body{
 }
 
 #logo{
-    width: 40vw;
+    width: 600px;
     height: 170px;
     background: url("pixel-text-22-10-2024.png");
     background-size: cover;
+    background-position: center;
     margin: auto;
 }
 #buttons_input_container{
-    min-width: 39vw;
-    max-width: 39vw;
+    width: 580px;
     height: 45px;
     margin: 20px auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
 }
-button{
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: rgb(115, 115, 115);
-    color: whitesmoke;
-    padding: 0 8px;
-    font-size: 15px;
-    font-weight: bold;
+.inputsDiv, .buttonsDiv{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-button:hover{
-    background-color: whitesmoke;
-    color: rgb(115, 115, 115);
-    border: 1px solid black;
-}
+
 #inputColor{
     height: 100%;
 }
@@ -47,6 +41,23 @@ button:hover{
     font-size: 20px;
     opacity: 50%;
 }
+
+button{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(115, 115, 115);
+    color: whitesmoke;
+    padding: 0 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: rgb(115, 115, 115);
+    border: 1px solid black;
+}
+
 
 #sentenceContainer {
     margin-top: 50px;
@@ -64,19 +75,43 @@ button:hover{
 }
 .letterContainer{
     display: grid;
-    grid-template-columns: repeat(7, 20px); /* 5 columns, each 20px wide */
-    grid-template-rows: repeat(7, 20px); /* 7 rows, each 20px high */
-    gap: 2px; /* small gap between pixels */
+    grid-template-columns: repeat(7, 20px);
+    grid-template-rows: repeat(7, 20px);
+    gap: 2px;
 }
-  .pixel {
+.pixel {
     width: 20px;
     height: 20px;
     background-color: lightgray;
 }
 
-/* .active {
-    background-color: black; 
+
+@media (max-width: 780px){
+    #logo{
+        width: 400px;
+        height: 150px;
+        background-size: 100%;
+    }
+    #buttons_input_container{
+        height: 90px;
+        width: 300px;
+        flex-direction: column;
+    }
+    .inputsDiv, .buttonsDiv{
+        width: 100%;
+    }
+    button{
+        width: 50%;
+    }
+    #sentenceContainer{
+        gap: 15px;
+    }
+    .letterContainer{
+        grid-template-columns: repeat(7, 10px);
+        grid-template-rows: repeat(7, 10px);
+    }
+    .pixel{
+        width: 10px;
+        height: 10px;
+    }
 }
-.unique{
-    background-color: red;
-} */
