@@ -87,31 +87,59 @@ button:hover{
 
 
 @media (max-width: 780px){
+    body{
+        background-color: silver;
+    }
     #logo{
         width: 400px;
         height: 150px;
+        background: url("pixel-text-22-10-2024.png");
+        background-position: center;
         background-size: 100%;
+        margin: auto;
     }
     #buttons_input_container{
         height: 90px;
         width: 300px;
+        margin: 20px auto;
+        display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
     }
     .inputsDiv, .buttonsDiv{
         width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content:start;
     }
     button{
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgb(115, 115, 115);
+        color: whitesmoke;
+        padding: 0 8px;
+        font-size: 15px;
+        font-weight: bold;
         width: 50%;
     }
     #sentenceContainer{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
         gap: 15px;
     }
     .letterContainer{
+        display: grid;
         grid-template-columns: repeat(7, 10px);
         grid-template-rows: repeat(7, 10px);
+        gap: 2px;
     }
     .pixel{
         width: 10px;
         height: 10px;
+        background-color: lightgray;
     }
 }
